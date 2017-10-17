@@ -1,0 +1,29 @@
+// Brand Vertical
+$brand--v-height: 36px;
+$brand--v-width: 44px;
+
+// Brand Horizontal.
+$brand--h-height: 20px;
+$brand--h-width: 74px;
+
+.brand-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.brand-img--v,
+.brand-img--h {
+  max-width: none;
+}
+
+.brand-img--v {
+  height: $brand--v-height;
+  width: $brand--v-width;
+}
+
+.brand-img--h {
+  height: $brand--h-height;
+  width: $brand--h-width;
+}

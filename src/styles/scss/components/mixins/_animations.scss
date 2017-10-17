@@ -1,0 +1,20 @@
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin make-animation($options: $animation-settings) {
+  $prop-maps: (
+    animation-iteration-count: count,
+    animation-duration: duration,
+    animation-delay: delay,
+    animation-timing-function: ease,
+    animation-fill-mode: fill,
+    backface-visibility: visibility
+  );
+
+  @each $prop, $map in $prop-maps {
+    #{$prop}: map_get($options, $map);
+  }
+}

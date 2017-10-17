@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="110" height="110" viewBox="0 0 110 110" xml:space="preserve" class="svg-icon svg-generate">
+	<g class="content">
+		<line class="content--t-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="27.7" y1="46.9" x2="75.4" y2="46.9"/>
+		<line class="content--b-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="27.7" y1="53.3" x2="75.4" y2="53.3"/>
+		<rect class="content--l-col-fill" x="26.2" y="62.2" fill="#031DD6" width="13" height="16.6"/>
+		<rect class="content--l-col" x="26.2" y="62.2" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" width="13" height="16.6"/>
+		<rect class="content--m-col" x="45.1" y="62.2" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" width="13" height="16.6"/>
+		<rect class="content--r-col" x="63.5" y="62.2" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" width="13" height="16.6"/>
+	</g>
+	<g class="chrome">
+		<line class="chrome--line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="6.7" y1="35.1" x2="96.6" y2="35.1"/>
+		<polyline class="chrome--rect" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" points="96.5,72.3 96.5,23.2 6.6,23.2 6.6,94.4
+			71.7,94.4 "/>
+	</g>
+	<g class="bubble">
+		<path class="bubble--fill" fill="#FFFFFF" d="M103.4,90.9v-5c0-9.4-7.6-17-17-17c-9.4,0-17,7.6-17,17c0,9.4,7.6,17,17,17h5.9"/>
+		<path class="bubble--line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" d="M103.4,90.9v-5c0-9.4-7.6-17-17-17
+			c-9.4,0-17,7.6-17,17c0,9.4,7.6,17,17,17h5.9"/>
+		<polyline class="bubble--tick" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" points="80.9,86.1 85.2,90.2 91.8,82.7 	"/>
+		<polyline class="bubble--arr" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" points="103.4,93.9 103.4,102.9 95.1,102.9 	"/>
+	</g>
+</svg>

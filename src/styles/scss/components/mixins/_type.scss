@@ -1,0 +1,15 @@
+/**
+ * Generate letter-spacing from value (from Illustrator)
+ */
+@mixin make-letter-space-value($value) {
+  letter-spacing: ($value/1000) * 1rem;
+}
+
+/**
+ * Generate letter-spacing from default text-tracking variable.
+ */
+@mixin make-letter-space($size) {
+  $space: map-get($letter-spaces, $size);
+
+  @include make-letter-space-value($space);
+}

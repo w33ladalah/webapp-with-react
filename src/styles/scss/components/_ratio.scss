@@ -1,0 +1,32 @@
+.ratio {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  .ratio-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .ratio-size {
+    position: relative;
+    display: block;
+  }
+}
+
+@each $key, $sizes in $ratio-sizes {
+  $w: nth($sizes, 1);
+  $h: nth($sizes, 2);
+
+  .ratio-size-#{$key} {
+    @include make-ratio-sizing($h, $w);
+  }
+}

@@ -1,0 +1,30 @@
+.section--x {
+  padding-left: $section-sm-pl;
+  padding-right: $section-sm-pr;
+}
+
+.section--y {
+  padding-top: $section-sm-pt;
+  padding-bottom: $section-sm-pb;
+}
+
+.section--y-lg {
+  @extend .section--y;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: $section-lg-pt;
+    padding-bottom: $section-lg-pb;
+  }
+}
+
+.section--x-lg {
+  @extend .section--x;
+
+  padding-left: $section-sm-pl;
+  padding-right: $section-sm-pr;
+
+  @include media-breakpoint-up(xl) {
+    padding-left: $section-lg-pl;
+    padding-right: $section-lg-pr;
+  }
+}

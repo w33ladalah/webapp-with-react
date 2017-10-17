@@ -1,0 +1,59 @@
+@import 'icons-animation';
+
+.icon {
+  display: inline-block;
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  vertical-align: middle;
+  width: $icon-size;
+  height: $icon-size;
+
+  svg {
+    // For use icon the svg markup.
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@each $size, $value in $icon-sizes {
+  .icon-#{$size} {
+    width: $value;
+    height: $value;
+  }
+}
+
+.icon-fluid {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.icon-svg {
+  background-position: 0 0; // center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+//== Icon Definitions
+$svg-icons: (
+  'rarr',
+  'larr',
+  'd-rarr',
+  'paper',
+  'people',
+  'marker',
+  'house',
+  'bubble-chat',
+  'magnifier',
+);
+
+@each $icon in $svg-icons {
+  .icon-svg--#{$icon} { background-image: url('../images/icons/icon_#{$icon}.svg'); }
+}
+
+// Alternative icon-theming
+
+@each $color, $value in $theme-colors {
+  .icon-#{$color} {
+    @include icon-variant($value, $value);
+  }
+}

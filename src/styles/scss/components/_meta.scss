@@ -1,0 +1,11 @@
+.meta {
+  @include make-letter-space(sm);
+
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  color: grayscale(500);
+}
+
+.meta-title {
+  color: grayscale(700);
+}

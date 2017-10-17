@@ -1,0 +1,31 @@
+/**
+ * Allow polyfill for this.
+ * Use a mixin to apply the properties.
+ *
+ * @see https://github.com/bfred-it/object-fit-images for documentation.
+ */
+.js-object-fit {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+
+  &.ready {
+    visibility: visible;
+  }
+}
+
+.object-fit--fill {
+  @include object-fit(fill, center);
+}
+
+.object-fit--cover {
+  @include object-fit(cover, center);
+}
+
+img,
+video {
+  &.object-fit--cover {
+    max-width: none;
+    max-height: none;
+  }
+}

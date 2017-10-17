@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-flow: column;
+
+  [role="document"].wrap {
+    flex-grow: 1;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  &[disable],
+  &.disable {
+    cursor: not-allowed;
+  }
+}
+
+.main {
+  // min-height: calc(100vh - 144px) !important;
+}
+
+.reveal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  .reveal-block {
+    transform-origin: top center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

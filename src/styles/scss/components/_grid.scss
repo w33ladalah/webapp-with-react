@@ -1,0 +1,54 @@
+// Grid system
+// .wrap {
+//   @extend .container;
+//
+//   .content-wide & {
+//     max-width: none;
+//   }
+// }
+
+.content {
+  // @include make-row;
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
+.outdent {
+  margin-left: $grid-gutter-width * -0.5;
+  margin-right: $grid-gutter-width * -0.5;
+}
+
+.inner-wrap {
+  display: flex;
+  flex-flow: wrap column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// .content-px-0 {
+//   .main,
+//   .sidebar {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
+
+// .main {
+//   @include make-col-ready();
+//   @include make-col($main-sm-columns);
+//
+//   @include media-breakpoint-up(sm) {
+//     .sidebar-primary & {
+//       @include make-col($main-sm-columns - $sidebar-sm-columns);
+//     }
+//   }
+// }
+//
+// .sidebar {
+//   @include make-col-ready();
+//   @include make-col($sidebar-sm-columns);
+//
+//   @include media-breakpoint-up(sm) {
+//     @include make-col($sidebar-sm-columns);
+//   }
+// }

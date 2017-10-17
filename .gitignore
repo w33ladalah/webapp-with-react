@@ -1,0 +1,10 @@
+/node_modules
+/dist/*
+/coverage
+/.idea/
+
+!dist/.gitkeep
+.DS_STORE
+*.log
+*.log.*
+.yarn-cache

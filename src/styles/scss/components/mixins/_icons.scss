@@ -1,0 +1,5 @@
+@mixin icon-variant($color, $stroke-color) {
+  .icon-fill { fill: $color; }
+  .icon-fill-alt { fill: darken($color, 7.5%); }
+  .icon-stroke { stroke: $stroke-color; }
+}

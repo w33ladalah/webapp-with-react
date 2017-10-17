@@ -1,0 +1,130 @@
+.btn {
+  @include make-letter-space(sm);
+
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+}
+
+.btn-xs {
+  @include button-size(
+    $input-btn-padding-y-sm,
+    $input-btn-padding-x-sm,
+    $font-size-xs,
+    $line-height-sm,
+    $btn-border-radius-sm
+  );
+}
+
+.btn-w-icon {
+  .icon {
+    margin-left: $spacer * 0.5;
+    margin-right: $spacer * 0.5;
+  }
+}
+
+.btn-w-icon--r {
+  .icon {
+    margin-right: $spacer * -0.5;
+  }
+}
+
+.btn-w-icon--l {
+  .icon {
+    margin-left: $spacer * -0.5;
+  }
+}
+
+// Fixed button color.
+.btn-primary {
+  color: theme-color(light);
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn--submit {
+  @extend .btn-primary;
+}
+
+//== Button animation
+.btn {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: $transition-btn-bg;
+    transform-origin: 100% 50%;
+    transform: scale(0, 1);
+  }
+
+  &:hover,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    &::before {
+      transform-origin: 0% 50%;
+      transform: scale(1, 1);
+    }
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    &::before {
+      @include box-shadow($btn-active-box-shadow);
+    }
+  }
+}
+
+// Redefine theme-colors styling
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    &::before {
+      background-color: darken($value, 7.5%);
+    }
+
+    // &:focus,
+    // &.focus {
+    //   // Avoid using mixin so we can pass custom focus shadow properly
+    //   @if $enable-shadows {
+    //     box-shadow: $btn-box-shadow, 0 0 0 2px rgba($value, 0.5);
+    //   }
+    //
+    //   @else {
+    //     box-shadow: 0 0 0 3px rgba($value, 0.5);
+    //   }
+    // }
+
+    &:hover,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      background-color: $value;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    &::before {
+      background-color: $value;
+    }
+
+    &:hover,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      background-color: transparent;
+    }
+  }
+}

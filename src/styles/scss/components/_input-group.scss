@@ -1,0 +1,22 @@
+.input-group {
+  .form-control {
+    padding: $input-btn-padding-y-lg * 0.75 $input-btn-padding-x-lg * 0.5;
+    border-width: 0 !important;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  .input-group-btn {
+    height: 100%;
+  }
+
+  .btn {
+    padding: $input-btn-padding-y-lg * 1;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    border-color: transparent !important;
+    margin-left: 0;
+  }
+}

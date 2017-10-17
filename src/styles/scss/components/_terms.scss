@@ -1,0 +1,121 @@
+$term-boxed-padding: $spacer * 2 $spacer * 2;
+$term-boxed-border: grayscale(200);
+
+.terms {
+  overflow: hidden;
+}
+
+.term--boxed {
+  .boxed {
+    padding: $term-boxed-padding;
+  }
+
+  .boxed-header {
+    padding-top: 0;
+  }
+
+  .boxed-footer {
+    padding-bottom: 0;
+  }
+
+  .boxed-body {
+    padding: 0;
+  }
+}
+
+.term--boxed-w-icon .boxed {
+  display: flex;
+
+  .boxed-title {
+    margin-bottom: 0;
+  }
+
+  .boxed-body {
+    flex-grow: 1;
+    width: 100%;
+    margin-right: $spacer * 1.5;
+  }
+}
+
+.terms {
+  .term {
+    .term-title {
+      font-weight: $font-weight-medium;
+    }
+
+    .term-description {
+      font-size: $font-size-xs;
+    }
+  }
+
+  .term-children {
+    .term-title {
+      font-size: $font-size-lg;
+      color: theme-color(gray);
+    }
+  }
+}
+
+//== Knowledge Base Taxonomy
+
+.tax-kb-categories {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-bottom: $spacer * 3;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $spacer * 5;
+  }
+
+  .term--boxed {
+    margin-top: -1px;
+    margin-left: -1px;
+    border: 1px solid $term-boxed-border;
+  }
+
+  .term-link {
+    display: block;
+    height: 100%;
+  }
+}
+
+// .tax-topic
+
+.tax-kb-categories {
+  .term-link {
+    background-color: theme-color(light);
+    color: theme-color(gray) !important;
+
+    .svg-paper [fill] {
+      fill: theme-color(gray);
+    }
+
+    @include hover-focus {
+      background-color: theme-color(primary);
+      color: theme-color(light) !important;
+
+      .svg-paper [fill] {
+        fill: theme-color(light);
+      }
+    }
+  }
+
+  .active .term-link {
+    background-color: theme-color(primary);
+    color: theme-color(light) !important;
+
+    .svg-paper [fill] {
+      fill: theme-color(light);
+    }
+
+    @include hover-focus {
+      background-color: theme-color-level(primary, 1);
+
+      .svg-paper [fill] {
+        fill: theme-color(light);
+      }
+    }
+  }
+}

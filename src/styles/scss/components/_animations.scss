@@ -1,0 +1,40 @@
+$animation-names: (
+  fadeInUp,
+  fadeInLeft,
+  fadeIn,
+);
+
+@import 'animations/keyframes';
+
+.ani {
+  @include make-animation;
+
+  animation-fill-mode: both;
+}
+
+.ani-pause {
+  &,
+  & .ani {
+    animation-play-state: paused;
+  }
+}
+
+@for $i from 1 through $animation-delays-counts {
+  .ani-dl-#{$i} {
+    animation-delay: $animation-delay-iterate * $i;
+  }
+}
+
+@each $name, $duration in $animation-durations {
+  .ani-du-#{$name} {
+    animation-duration: $duration;
+  }
+}
+
+@each $name in $animation-names {
+  .ani-#{$name} {
+    animation-name: #{$name};
+  }
+}
+
+//== Javascript Powered animatins.

@@ -1,0 +1,30 @@
+$header-link: $gray-600;
+$header-link-hover: $gray-800;
+
+.header {
+  .nav-link {
+    @include make-letter-space(sm);
+
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    color: $header-link;
+
+    @include hover-focus-active {
+      color: theme-color('primary');
+    }
+  }
+
+  .active .nav-link {
+    color: theme-color('primary');
+  }
+
+  .my-account .nav-link {
+    @extend .btn, .btn-primary;
+
+    display: block;
+    padding: $nav-link-padding-y $nav-link-padding-x;
+    font-size: $font-size-xxs;
+    text-align: left;
+  }
+}

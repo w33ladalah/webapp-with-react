@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="110" height="110" viewBox="0 0 110 110" xml:space="preserve" class="svg-icon svg-account">
+	<g class="chrome">
+		<polyline class="chrome--rect" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" points="32.2,24.2 9.9,24.2 9.9,95.1 99.9,95.1
+			99.9,23.9 75.8,23.9 	"/>
+		<line class="chrome--l-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="9.9" y1="33.6" x2="34.3" y2="33.6"/>
+		<line class="chrome--r-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="73.6" y1="33.6" x2="100.1" y2="33.6"/>
+	</g>
+	<g class="account-user">
+		<polyline class="account-user--arr" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" points="58.3,33.6 54.3,37.7 50.2,33.6 	"/>
+		<circle class="account-user--o" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" cx="54.1" cy="24.2" r="5.9"/>
+		<path class="account-user--l-hand" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" d="M47.7,30.3c0,0-5,3-5,12.6"/>
+		<path class="account-user--r-hand" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" d="M60.3,30.3c0,0,5,3,5,12.6"/>
+		<circle class="account-user--O" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" cx="54" cy="24.2" r="21.8"/>
+	</g>
+	<g class="content">
+		<line class="content--t-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="30.6" y1="56" x2="78.3" y2="56"/>
+		<line class="content--b-line" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" x1="30.6" y1="62.4" x2="78.3" y2="62.4"/>
+		<rect class="content--l-col" x="30.6" y="72.6" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" width="19.9" height="6.3"/>
+		<rect class="content--r-col" x="58.5" y="72.6" fill="none" stroke="#031DD6" stroke-width="2" stroke-miterlimit="10" width="19.9" height="6.3"/>
+		<rect class="content--r-col-fill" x="58.5" y="72.6" fill="#031DD6" width="19.9" height="6.3"/>
+	</g>
+</svg>

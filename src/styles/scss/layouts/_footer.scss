@@ -1,0 +1,81 @@
+$footer-brand-breakpoint: sm;
+$footer-breakpoint: lg;
+
+.footer {
+  position: relative;
+  padding-top: $spacer * 1;
+  padding-bottom: $spacer * 1;
+  background-color: grayscale(50);
+  min-height: $brand--v-height * 2.25;
+
+  .row {
+    @include media-breakpoint-up($footer-brand-breakpoint) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-col {
+  @include make-col-ready;
+  @include make-col(12);
+}
+
+.footer-brand {
+  display: none;
+
+  @include media-breakpoint-up($footer-brand-breakpoint) {
+    display: block;
+
+    + .row { margin-left: $spacer * 8; }
+  }
+}
+
+.footer-nav {
+  @include media-breakpoint-up($footer-breakpoint) {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none; // Reset earlier grid tiers
+  }
+}
+
+.footer-attribution {
+  margin-top: $spacer * 2;
+
+  @include media-breakpoint-up($footer-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+.attribution {
+  font-size: $font-size-xxs;
+  font-weight: $font-weight-light;
+  color: grayscale(600);
+}
+
+.footer-nav {
+  .nav {
+    @include make-row;
+  }
+
+  .nav-item {
+    @include make-col(6);
+
+    @include media-breakpoint-up($footer-brand-breakpoint) {
+      padding-left: 0;
+      padding-right: 0;
+      flex-basis: auto;
+      max-width: none;
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    font-size: $font-size-xs;
+    color: color(gray);
+
+    @include hover-focus-active {
+      color: color(gray-dark);
+    }
+  }
+}

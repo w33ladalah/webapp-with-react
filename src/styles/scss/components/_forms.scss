@@ -1,0 +1,132 @@
+// Forms.
+.form-control {
+  // Make all input padless on the x-axis.
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-left-color: transparent !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &::placeholder {
+    opacity: 0; // Simply remove.
+  }
+}
+
+// Make floating labels.
+.form-group.float {
+  position: relative;
+  margin-top: $input-btn-padding-y * 2; // + $form-group-margin-bottom * 1;
+  margin-bottom: $input-btn-padding-y * 2; // + $form-group-margin-bottom * 2;
+  padding-bottom: $input-btn-padding-y; // + $form-group-margin-bottom * 2;
+
+  .form-control-label {
+    position: absolute;
+    line-height: $input-btn-line-height;
+    transform: translateY(175%);
+    margin-bottom: 0;
+    bottom: 100%;
+    opacity: 0.35;
+    transition: $transition-form-label;
+  }
+
+  &:hover .form-control-label {
+    opacity: 0.85;
+  }
+
+  &.focus .form-control-label,
+  &.fill .form-control-label {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  span.text-danger {
+    font-size: 0.75em;
+    &:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\F06A';
+      margin-right: 5px;
+    }
+  }
+}
+
+.form-control-label,
+.form-control,
+.form-text {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.form-control-label {
+  font-size: $font-size-xs;
+}
+
+.form-text {
+  color: $text-muted;
+  font-size: $font-size-sm;
+}
+
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  font-weight: normal;
+
+  @extend .form-group;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-primary;
+
+  line-height: 1.85;
+}
+
+.knowledge-base--search-form .input-group {
+  .form-control {
+    border-color: transparent;
+    background-color: color(white);
+
+    @include media-breakpoint-up(md) {
+      padding: $input-btn-padding-y-lg * 1.25 $input-btn-padding-x-lg * 1;
+      font-size: $h3-font-size;
+    }
+  }
+
+  .btn {
+    @extend .btn-lg;
+
+    padding: $input-btn-padding-y-lg;
+    border-color: theme-color(primary);
+
+    @include media-breakpoint-up(md) {
+      padding: $input-btn-padding-y-lg * 1.5;
+
+      .icon {
+        height: $h2-font-size;
+        width: $h2-font-size;
+      }
+    }
+  }
+}
+
+//== Custom Col.
+#form_contact-form {
+  .custom-col {
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+}

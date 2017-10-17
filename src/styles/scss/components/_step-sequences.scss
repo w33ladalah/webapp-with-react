@@ -1,0 +1,47 @@
+$step-sequence-dot-size: 1rem;
+$step-sequence-space: $step-sequence-dot-size * 3;
+
+.step-sequences {
+  @include list-unstyled;
+
+  position: relative;
+  padding-left: $step-sequence-space + $step-sequence-dot-size;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: ($step-sequence-space + $step-sequence-dot-size) * 0.5;
+    width: 1px;
+    // background-color: theme-color(dark);
+    // background-color: rgba(theme-color(dark), 0.125);
+    border-left: 1px dashed rgba(theme-color(dark), 0.125);
+    margin-top: $spacer * 1.5;
+    margin-bottom: $spacer * 1.5;
+  }
+}
+
+.step-sequence {
+  position: relative;
+  padding-top: $spacer * 1;
+  padding-bottom: $spacer * 1;
+  // border-bottom: 1px solid $hr-border-color;
+
+  &::before {
+    // content: "●";
+    content: "";
+    position: absolute;
+    display: block;
+    width: $step-sequence-dot-size;
+    height: $step-sequence-dot-size;
+    top: 0;
+    left: ($step-sequence-space + $step-sequence-dot-size) * -1;
+    margin-top: $spacer * 1.25;
+    margin-left: $step-sequence-space * 0.5;
+    border-radius: 100%;
+    background-color: theme-color(secondary);
+    border: 3px solid theme-color-level(light, 1);
+    color: rgba(theme-color(dark), 0.25);
+  }
+}

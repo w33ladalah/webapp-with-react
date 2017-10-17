@@ -1,0 +1,30 @@
+.frm_required,
+.frm_hidden,
+.frm_ajax_loading {
+  display: none;
+}
+
+$formidable-breakpoint: md;
+
+.form-wrap {
+  @include make-row;
+}
+
+.form-col {
+  @include make-col-ready;
+  @include make-col(12);
+}
+
+.field-type-captcha {
+  label {
+    display: none;
+  }
+}
+
+.frm_submit {
+  @include clearfix;
+
+  .frm_button_submit {
+    float: right;
+  }
+}

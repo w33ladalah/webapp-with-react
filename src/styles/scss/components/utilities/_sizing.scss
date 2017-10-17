@@ -1,0 +1,9 @@
+@each $breakpoint, $width in $container-max-widths {
+  .max-w-#{$breakpoint} {
+    max-width: $width !important;
+  }
+}
+
+.max-w-xs {
+  max-width: (map-get($container-max-widths, sm) / 1.333) !important;
+}

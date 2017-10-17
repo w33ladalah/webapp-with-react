@@ -1,0 +1,10 @@
+.alert {
+  font-size: $font-size-sm;
+  background-color: transparent !important;
+  color: theme-color(gray);
+  border-left-width: $spacer * 1;
+
+  p {
+    margin-bottom: 0;
+  }
+}

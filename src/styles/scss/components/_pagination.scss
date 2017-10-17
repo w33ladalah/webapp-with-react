@@ -1,0 +1,39 @@
+.pagination {
+  justify-content: center;
+
+  .page-next {
+    margin-left: auto;
+
+    .icon {
+      margin-left: $spacer * 0.5;
+    }
+  }
+
+  .page-prev {
+    margin-right: auto;
+
+    .icon {
+      margin-right: $spacer * 0.5;
+    }
+  }
+
+  .page-item.disabled {
+    .icon {
+      opacity: 0.25;
+    }
+  }
+}
+
+.pagination-pager {
+  .page-link {
+    text-transform: uppercase;
+
+    .page-link-title {
+      vertical-align: middle;
+    }
+  }
+}
+
+.page-link {
+  font-size: $font-size-xs;
+}

@@ -1,0 +1,16 @@
+.entry-content {
+  @include clearfix;
+
+  // Spacious
+  h1,
+  h2,
+  h3 {
+    margin-bottom: $spacer * 1;
+  }
+
+  ul,
+  ol,
+  p {
+    margin-bottom: $spacer * 1.5;
+  }
+}

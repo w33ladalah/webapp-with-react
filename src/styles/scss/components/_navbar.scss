@@ -1,0 +1,121 @@
+$navbar-breakpoint-down: md;
+$navbar-breakpoint: breakpoint-next($navbar-breakpoint-down);
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding: $navbar-padding-y 0;
+  z-index: $zindex-navbar;
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properities so that content nested within behave properly.
+  > .container,
+  > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: $navbar-brand-padding-y;
+  padding-bottom: $navbar-brand-padding-y;
+  margin-right: $navbar-padding-x;
+  font-size: $navbar-brand-font-size;
+  line-height: inherit;
+  white-space: nowrap;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; // Defaults to row.
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-mobile & {
+    flex-direction: column;
+  }
+}
+
+.navbar-desktop-only {
+  @include media-breakpoint-down($navbar-breakpoint-down) {
+    display: none;
+  }
+}
+
+.navbar-mobile-backdrop {
+  background-color: rgba($black, 0.25);
+  z-index: 1;
+}
+
+.navbar-mobile {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: none;
+  z-index: $zindex-fixed;
+
+  @include media-breakpoint-down($navbar-breakpoint-down) {
+    .navbar-mobile--show & {
+      display: block;
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 4rem;
+    z-index: $zindex-fixed;
+  }
+}
+
+.navbar-mobile-toggler {
+  @include media-breakpoint-up($navbar-breakpoint) {
+    display: none;
+  }
+}
+
+// .navbar-mobile--show {
+// }
+
+// Navbar Primary
+.navbar-nav--primary {
+  .nav-link {
+    background-color: color(white);
+  }
+}
+
+// Navbar Language
+.navbar-nav--language {
+  .dropdown-menu {
+    min-width: none;
+    right: 0;
+    left: auto; // Reset the default from `.dropdown-menu`
+
+    .nav-link {
+      @include hover-focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// Navbar theme.
+.navbar-main {
+  background-color: color(white);
+}

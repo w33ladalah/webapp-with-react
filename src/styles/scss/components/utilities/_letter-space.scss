@@ -1,0 +1,6 @@
+// Text tracking
+@each $size in map-keys($letter-spaces) {
+  .letter-space-#{$size} {
+    @include make-letter-space($size);
+  }
+}

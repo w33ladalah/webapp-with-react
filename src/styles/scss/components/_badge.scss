@@ -1,0 +1,60 @@
+.badge {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: $transition-badge;
+
+  &::before {
+    @include border-radius($badge-pill-border-radius);
+
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: $transition-btn-bg;
+    transform-origin: 100% 50%;
+    transform: scale(0, 1);
+  }
+
+  @include hover-focus {
+    &::before {
+      transform-origin: 0% 50%;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color}[href] {
+    &::before {
+      background-color: darken($value, 10%);
+    }
+
+    @include hover-focus {
+      background-color: $value;
+    }
+  }
+}
+
+.badge-outline {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-variant-outline($value);
+  }
+}
+
+.badge-outline-topic {
+  @extend .badge-outline-primary;
+
+  color: rgba($black, 0.3);
+  border-color: rgba($black, 0.3);
+}

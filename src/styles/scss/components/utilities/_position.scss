@@ -1,0 +1,17 @@
+.pos-abs { position: absolute; }
+.pos-fixed { position: fixed; }
+.pos-static { position: static; }
+.pos-relative { position: relative; }
+
+.pos-mid {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pos-t { top: 0 !important; }
+.pos-b { bottom: 0 !important; }
+.pos-y { @extend .pos-t, .pos-b; }
+
+.pos-l { left: 0 !important; }
+.pos-r { right: 0 !important; }
+.pos-x { @extend .pos-l, .pos-r; }
